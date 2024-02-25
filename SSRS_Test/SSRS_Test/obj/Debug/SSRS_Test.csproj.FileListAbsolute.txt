@@ -1,0 +1,11 @@
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.exe.config
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.exe
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.pdb
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.AssemblyReference.cache
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.LoginPage.resources
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.Properties.Resources.resources
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.GenerateResource.cache
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.CoreCompileInputs.cache
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.exe
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.pdb
+C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.RegisterPage.resources

@@ -9,3 +9,15 @@ C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.CoreC
 C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.exe
 C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.pdb
 C:\Users\naysi\source\repos\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.RegisterPage.resources
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.exe.config
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.exe
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.pdb
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.AssemblyReference.cache
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.LoginPage.resources
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.Properties.Resources.resources
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.RegisterPage.resources
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.UserPage.resources
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.GenerateResource.cache
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.CoreCompileInputs.cache
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.exe
+D:\GitHub\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.pdb

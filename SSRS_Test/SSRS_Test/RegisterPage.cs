@@ -25,14 +25,18 @@ namespace SSRS_Test
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            LoginPage.connection.Open();
-            SqlCommand insertCommand = new SqlCommand("insert into Person values(@personName,@personSurname,@personEmail,@personPassword,1)", LoginPage.connection);
+            CreatePerson();
+        }
+        private void CreatePerson()
+        {
+            Database.OpenConnection();
+            SqlCommand insertCommand = new SqlCommand("insert into Person values(@personName,@personSurname,@personEmail,@personPassword,1)", Database.GetConnection());
             insertCommand.Parameters.AddWithValue("@personName", NameTextBox.Text);
             insertCommand.Parameters.AddWithValue("@personSurname", SurnameTextBox.Text);
             insertCommand.Parameters.AddWithValue("@personEmail", EmailTextBox.Text);
             insertCommand.Parameters.AddWithValue("@personPassword", PasswordTextBox.Text);
             insertCommand.ExecuteNonQuery();
-            LoginPage.connection.Close();
+            Database.CloseConnection();
             this.Close();
         }
     }

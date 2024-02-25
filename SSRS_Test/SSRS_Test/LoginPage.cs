@@ -13,39 +13,29 @@ namespace SSRS_Test
 {
     public partial class LoginPage : Form
     {
-        public static string connectionString = "Data Source=DESKTOP-3HOFD4J\\SQLEXPRESS;Initial Catalog=SSRS;Integrated Security=True";
-        public static SqlConnection connection = new SqlConnection(connectionString);
         public LoginPage()
         {
             InitializeComponent();
         }
-
         private void LoginButton_Click(object sender, EventArgs e)
         {
-            connection.Open();
-            SqlCommand getUserData = new SqlCommand("select * from Person where personEmail=@username and personPassword=@password", connection);
-            getUserData.Parameters.AddWithValue("@username", UsernameTextBox.Text);
-            getUserData.Parameters.AddWithValue("@password", PasswordTextBox.Text);
-            SqlDataReader userDataReader = getUserData.ExecuteReader();
-            if (userDataReader.Read())
+            string personEmail = UsernameTextBox.Text;
+            string personPassword = PasswordTextBox.Text;
+            if(Person.SetPersonData(personEmail, personPassword))
             {
-                int AuthID = Convert.ToInt32(userDataReader["personAuthID"]);
-                if (AuthID == 1)
+                int personAuthID = Person.GetPersonAuthID();
+                if(personAuthID == 1)
                 {
                     UserPage userPage = new UserPage();
                     userPage.Show();
                 }
-                else if (AuthID == 2)
+                else if (personAuthID == 2)
                 {
                     AdminPage adminPage = new AdminPage();
                     adminPage.Show();
                 }
+                this.Hide();
             }
-            else
-            {
-                MessageBox.Show("Login failed. Try Again.");
-            }
-            connection.Close();
         }
 
         private void RegisterLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

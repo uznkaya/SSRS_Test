@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SSRS_Test
 {
@@ -15,7 +16,7 @@ namespace SSRS_Test
         public static bool SetPersonData(string email, string password)
         {
             Database.OpenConnection();
-            SqlCommand getUserData = new SqlCommand("select * from Person where personEmail=@email and personPassword=@password",Database.GetConnection());
+            SqlCommand getUserData = new SqlCommand("select * from Person where personEmail=@email and personPassword=@password", Database.GetConnection());
             getUserData.Parameters.AddWithValue("@email", email);
             getUserData.Parameters.AddWithValue("@password", password);
             SqlDataReader dataReader = getUserData.ExecuteReader();

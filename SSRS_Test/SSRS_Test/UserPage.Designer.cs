@@ -37,9 +37,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.CikisYapButton = new System.Windows.Forms.Button();
             this.RandevuOlusturGroupBox = new System.Windows.Forms.GroupBox();
+            this.AppointmentPanel = new System.Windows.Forms.Panel();
+            this.DateComboBox = new System.Windows.Forms.ComboBox();
             this.RandevularimGroupBox = new System.Windows.Forms.GroupBox();
             this.AyarlarGroupBox = new System.Windows.Forms.GroupBox();
+            this.ChangePasswordButton = new System.Windows.Forms.Button();
+            this.NewPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.OldPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SportPanel = new System.Windows.Forms.Panel();
+            this.SportBackButton = new System.Windows.Forms.LinkLabel();
+            this.CreateNewAppointmentButton = new System.Windows.Forms.Button();
+            this.SportsComboBox = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.AnaSayfaGroupBox.SuspendLayout();
+            this.RandevuOlusturGroupBox.SuspendLayout();
+            this.AyarlarGroupBox.SuspendLayout();
+            this.SportPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameSurnameLabel
@@ -123,12 +138,30 @@
             // 
             // RandevuOlusturGroupBox
             // 
+            this.RandevuOlusturGroupBox.Controls.Add(this.AppointmentPanel);
+            this.RandevuOlusturGroupBox.Controls.Add(this.DateComboBox);
             this.RandevuOlusturGroupBox.Location = new System.Drawing.Point(12, 258);
             this.RandevuOlusturGroupBox.Name = "RandevuOlusturGroupBox";
             this.RandevuOlusturGroupBox.Size = new System.Drawing.Size(773, 191);
             this.RandevuOlusturGroupBox.TabIndex = 8;
             this.RandevuOlusturGroupBox.TabStop = false;
             this.RandevuOlusturGroupBox.Text = "Randevu Oluştur";
+            // 
+            // AppointmentPanel
+            // 
+            this.AppointmentPanel.Location = new System.Drawing.Point(8, 46);
+            this.AppointmentPanel.Name = "AppointmentPanel";
+            this.AppointmentPanel.Size = new System.Drawing.Size(759, 139);
+            this.AppointmentPanel.TabIndex = 1;
+            // 
+            // DateComboBox
+            // 
+            this.DateComboBox.FormattingEnabled = true;
+            this.DateComboBox.Location = new System.Drawing.Point(8, 19);
+            this.DateComboBox.Name = "DateComboBox";
+            this.DateComboBox.Size = new System.Drawing.Size(121, 21);
+            this.DateComboBox.TabIndex = 0;
+            this.DateComboBox.SelectedIndexChanged += new System.EventHandler(this.DateComboBox_SelectedIndexChanged);
             // 
             // RandevularimGroupBox
             // 
@@ -141,6 +174,11 @@
             // 
             // AyarlarGroupBox
             // 
+            this.AyarlarGroupBox.Controls.Add(this.ChangePasswordButton);
+            this.AyarlarGroupBox.Controls.Add(this.NewPasswordTextBox);
+            this.AyarlarGroupBox.Controls.Add(this.OldPasswordTextBox);
+            this.AyarlarGroupBox.Controls.Add(this.label3);
+            this.AyarlarGroupBox.Controls.Add(this.label1);
             this.AyarlarGroupBox.Location = new System.Drawing.Point(12, 652);
             this.AyarlarGroupBox.Name = "AyarlarGroupBox";
             this.AyarlarGroupBox.Size = new System.Drawing.Size(773, 191);
@@ -148,11 +186,104 @@
             this.AyarlarGroupBox.TabStop = false;
             this.AyarlarGroupBox.Text = "Ayarlar";
             // 
+            // ChangePasswordButton
+            // 
+            this.ChangePasswordButton.Location = new System.Drawing.Point(28, 80);
+            this.ChangePasswordButton.Name = "ChangePasswordButton";
+            this.ChangePasswordButton.Size = new System.Drawing.Size(161, 23);
+            this.ChangePasswordButton.TabIndex = 4;
+            this.ChangePasswordButton.Text = "Değiştir";
+            this.ChangePasswordButton.UseVisualStyleBackColor = true;
+            this.ChangePasswordButton.Click += new System.EventHandler(this.ChangePasswordButton_Click);
+            // 
+            // NewPasswordTextBox
+            // 
+            this.NewPasswordTextBox.Location = new System.Drawing.Point(89, 54);
+            this.NewPasswordTextBox.Name = "NewPasswordTextBox";
+            this.NewPasswordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NewPasswordTextBox.TabIndex = 3;
+            // 
+            // OldPasswordTextBox
+            // 
+            this.OldPasswordTextBox.Location = new System.Drawing.Point(89, 28);
+            this.OldPasswordTextBox.Name = "OldPasswordTextBox";
+            this.OldPasswordTextBox.Size = new System.Drawing.Size(100, 20);
+            this.OldPasswordTextBox.TabIndex = 2;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(25, 57);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Yeni Şifre :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Eski Şifre :";
+            // 
+            // SportPanel
+            // 
+            this.SportPanel.Controls.Add(this.SportBackButton);
+            this.SportPanel.Controls.Add(this.CreateNewAppointmentButton);
+            this.SportPanel.Controls.Add(this.SportsComboBox);
+            this.SportPanel.Controls.Add(this.label4);
+            this.SportPanel.Location = new System.Drawing.Point(791, 323);
+            this.SportPanel.Name = "SportPanel";
+            this.SportPanel.Size = new System.Drawing.Size(229, 100);
+            this.SportPanel.TabIndex = 2;
+            // 
+            // SportBackButton
+            // 
+            this.SportBackButton.AutoSize = true;
+            this.SportBackButton.Location = new System.Drawing.Point(194, 9);
+            this.SportBackButton.Name = "SportBackButton";
+            this.SportBackButton.Size = new System.Drawing.Size(32, 13);
+            this.SportBackButton.TabIndex = 3;
+            this.SportBackButton.TabStop = true;
+            this.SportBackButton.Text = "Back";
+            this.SportBackButton.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SportBackButton_LinkClicked);
+            // 
+            // CreateNewAppointmentButton
+            // 
+            this.CreateNewAppointmentButton.Location = new System.Drawing.Point(81, 66);
+            this.CreateNewAppointmentButton.Name = "CreateNewAppointmentButton";
+            this.CreateNewAppointmentButton.Size = new System.Drawing.Size(145, 23);
+            this.CreateNewAppointmentButton.TabIndex = 2;
+            this.CreateNewAppointmentButton.Text = "Create Appointment";
+            this.CreateNewAppointmentButton.UseVisualStyleBackColor = true;
+            this.CreateNewAppointmentButton.Click += new System.EventHandler(this.CreateNewAppointmentButton_Click);
+            // 
+            // SportsComboBox
+            // 
+            this.SportsComboBox.FormattingEnabled = true;
+            this.SportsComboBox.Location = new System.Drawing.Point(81, 39);
+            this.SportsComboBox.Name = "SportsComboBox";
+            this.SportsComboBox.Size = new System.Drawing.Size(145, 21);
+            this.SportsComboBox.TabIndex = 1;
+            this.SportsComboBox.SelectedIndexChanged += new System.EventHandler(this.SportsComboBox_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Spor Seçiniz :";
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 848);
+            this.ClientSize = new System.Drawing.Size(1061, 848);
+            this.Controls.Add(this.SportPanel);
             this.Controls.Add(this.RandevularimGroupBox);
             this.Controls.Add(this.AyarlarGroupBox);
             this.Controls.Add(this.RandevuOlusturGroupBox);
@@ -168,6 +299,11 @@
             this.Load += new System.EventHandler(this.UserPage_Load);
             this.AnaSayfaGroupBox.ResumeLayout(false);
             this.AnaSayfaGroupBox.PerformLayout();
+            this.RandevuOlusturGroupBox.ResumeLayout(false);
+            this.AyarlarGroupBox.ResumeLayout(false);
+            this.AyarlarGroupBox.PerformLayout();
+            this.SportPanel.ResumeLayout(false);
+            this.SportPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +322,17 @@
         private System.Windows.Forms.GroupBox RandevuOlusturGroupBox;
         private System.Windows.Forms.GroupBox RandevularimGroupBox;
         private System.Windows.Forms.GroupBox AyarlarGroupBox;
+        private System.Windows.Forms.Button ChangePasswordButton;
+        private System.Windows.Forms.TextBox NewPasswordTextBox;
+        private System.Windows.Forms.TextBox OldPasswordTextBox;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox DateComboBox;
+        private System.Windows.Forms.Panel AppointmentPanel;
+        private System.Windows.Forms.Panel SportPanel;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.LinkLabel SportBackButton;
+        private System.Windows.Forms.Button CreateNewAppointmentButton;
+        private System.Windows.Forms.ComboBox SportsComboBox;
     }
 }

@@ -117,7 +117,8 @@ namespace SSRS_Test
             int buttonSpacing = 10;
 
             Database.OpenConnection();
-            SqlCommand getAppointments = new SqlCommand("SELECT appointmentHour, appointmentSportID, COALESCE(Sports.sportName,null) as SportName from Appointments LEFT JOIN Sports ON Appointments.appointmentSportID = Sports.sportID WHERE appointmentDate = @date", Database.GetConnection());
+            //SqlCommand getAppointments = new SqlCommand("SELECT appointmentHour, appointmentSportID, COALESCE(Sports.sportName,null) as SportName from Appointments LEFT JOIN Sports ON Appointments.appointmentSportID = Sports.sportID WHERE appointmentDate = @date", Database.GetConnection());
+            SqlCommand getAppointments = new SqlCommand("SELECT appointmentHour, appointmentSportID, COALESCE(Sports.sportName,null) as SportName, COUNT(CreatedAppointments.createdappointmentAppID) as AppointmentCount, Sports.sportCapacity as SportCapacity FROM Appointments LEFT JOIN Sports ON Appointments.appointmentSportID = Sports.sportID LEFT JOIN CreatedAppointments ON Appointments.appointmentID = CreatedAppointments.createdappointmentAppID WHERE appointmentDate = @date GROUP BY appointmentHour, appointmentSportID, COALESCE(Sports.sportName, null), Sports.sportCapacity", Database.GetConnection());
 
             string inputDate = DateComboBox.Text;
             DateTime convertedDate = DateTime.ParseExact(inputDate, "dd-MM-yyyy", null);
@@ -133,7 +134,7 @@ namespace SSRS_Test
 
                 if (!dataReader.IsDBNull(1))
                 {
-                    newButton.Text = dataReader.GetTimeSpan(0).ToString() + "\n" + dataReader["SportName"].ToString();
+                    newButton.Text = dataReader.GetTimeSpan(0).ToString() + "\n" + dataReader["SportName"].ToString() + "\n" + dataReader["AppointmentCount"].ToString() + "/" + dataReader["SportCapacity"];
                 }
                 else
                 {
@@ -171,6 +172,9 @@ namespace SSRS_Test
             {
                 SportPanel.Hide();
             }
+            dataReader.Close();
+
+            //Randevu alınmış yere kapasite dolmadı ise tekrar al olayı gelicek
             Database.CloseConnection();
         }
         private void CreateNewAppointment(string appointmetID, string sportID)

@@ -60,6 +60,7 @@ namespace SSRS_Test
             RandevuOlusturGroupBox.Hide();
             RandevularimGroupBox.Hide();
             AyarlarGroupBox.Hide();
+            SportPanel.Hide();
         }
         private void RandevuOluşturButton_Click(object sender, EventArgs e)
         {
@@ -67,6 +68,7 @@ namespace SSRS_Test
             AnaSayfaGroupBox.Hide();
             RandevularimGroupBox.Hide();
             AyarlarGroupBox.Hide();
+            SportPanel.Hide();
         }
         private void RandevularımButton_Click(object sender, EventArgs e)
         {
@@ -74,6 +76,7 @@ namespace SSRS_Test
             RandevuOlusturGroupBox.Hide();
             AnaSayfaGroupBox.Hide();
             AyarlarGroupBox.Hide();
+            SportPanel.Hide();
         }
         private void AyarlarButton_Click(object sender, EventArgs e)
         {
@@ -81,6 +84,7 @@ namespace SSRS_Test
             RandevularimGroupBox.Hide();
             RandevuOlusturGroupBox.Hide();
             AnaSayfaGroupBox.Hide();
+            SportPanel.Hide();
         }
         private void CikisYapButton_Click(object sender, EventArgs e)
         {
@@ -118,7 +122,7 @@ namespace SSRS_Test
 
             Database.OpenConnection();
             //SqlCommand getAppointments = new SqlCommand("SELECT appointmentHour, appointmentSportID, COALESCE(Sports.sportName,null) as SportName from Appointments LEFT JOIN Sports ON Appointments.appointmentSportID = Sports.sportID WHERE appointmentDate = @date", Database.GetConnection());
-            SqlCommand getAppointments = new SqlCommand("SELECT appointmentHour, appointmentSportID, COALESCE(Sports.sportName,null) as SportName, COUNT(CreatedAppointments.createdappointmentAppID) as AppointmentCount, Sports.sportCapacity as SportCapacity FROM Appointments LEFT JOIN Sports ON Appointments.appointmentSportID = Sports.sportID LEFT JOIN CreatedAppointments ON Appointments.appointmentID = CreatedAppointments.createdappointmentAppID WHERE appointmentDate = @date GROUP BY appointmentHour, appointmentSportID, COALESCE(Sports.sportName, null), Sports.sportCapacity", Database.GetConnection());
+            SqlCommand getAppointments = new SqlCommand("SELECT appointmentHour, appointmentSportID, COALESCE(Sports.sportName,null) as SportName, COUNT(CreatedAppointments.createdappointmentAppID) as AppointmentCount, Sports.sportCapacity as SportCapacity, appointmentIsAvailable FROM Appointments LEFT JOIN Sports ON Appointments.appointmentSportID = Sports.sportID LEFT JOIN CreatedAppointments ON Appointments.appointmentID = CreatedAppointments.createdappointmentAppID WHERE appointmentDate = @date GROUP BY appointmentHour, appointmentSportID, COALESCE(Sports.sportName, null), Sports.sportCapacity, appointmentIsAvailable", Database.GetConnection());
 
             string inputDate = DateComboBox.Text;
             DateTime convertedDate = DateTime.ParseExact(inputDate, "dd-MM-yyyy", null);
@@ -132,9 +136,14 @@ namespace SSRS_Test
             {
                 Button newButton = new Button();
 
-                if (!dataReader.IsDBNull(1))
+                if (!dataReader.IsDBNull(1) && dataReader["appointmentIsAvailable"].ToString() == "True")
                 {
                     newButton.Text = dataReader.GetTimeSpan(0).ToString() + "\n" + dataReader["SportName"].ToString() + "\n" + dataReader["AppointmentCount"].ToString() + "/" + dataReader["SportCapacity"];
+                }
+                else if (!dataReader.IsDBNull(1) && dataReader["appointmentIsAvailable"].ToString() == "False")
+                {
+                    newButton.Text = dataReader.GetTimeSpan(0).ToString() + "\n" + dataReader["SportName"].ToString() + "\n" + "FULL";
+                    newButton.Enabled = false;
                 }
                 else
                 {
@@ -174,16 +183,60 @@ namespace SSRS_Test
             }
             dataReader.Close();
 
+            SqlCommand checkAppointmentHaveCapacity = new SqlCommand("SELECT Appointments.appointmentID, Appointments.appointmentDate, Appointments.appointmentHour, Sports.sportID, Sports.sportName, Sports.SportCapacity, COUNT(CreatedAppointments.createdappointmentAppID) AS AppointmentCount FROM Appointments INNER JOIN Sports ON Appointments.appointmentSportID = Sports.sportID LEFT JOIN CreatedAppointments ON Appointments.appointmentID = CreatedAppointments.createdappointmentAppID WHERE Appointments.appointmentDate = @date AND Appointments.appointmentHour = @hour GROUP BY Appointments.appointmentID, Appointments.appointmentDate, Appointments.appointmentHour, Sports.sportID, Sports.sportName, Sports.SportCapacity HAVING COUNT(CreatedAppointments.createdappointmentAppID) < Sports.SportCapacity OR COUNT(CreatedAppointments.createdappointmentAppID) IS NULL", Database.GetConnection());
+            checkAppointmentHaveCapacity.Parameters.AddWithValue("@hour", clickedButton.Tag.ToString());
+            checkAppointmentHaveCapacity.Parameters.AddWithValue("@date", outputConvertedDate);
+            SqlDataReader dataReader1 = checkAppointmentHaveCapacity.ExecuteReader();
+            if (dataReader1.Read())
+            {
+                AppointmentData = dataReader1["appointmentID"].ToString();
+                SportData = dataReader1["sportID"].ToString();
+                Database.CloseConnection();
+                CreateAppointment(AppointmentData, SportData);
+                CheckCapacity(AppointmentData);
+                SetAppointmentsHoursToDateComboBox();
+            }
+            dataReader1.Close();
+
             //Randevu alınmış yere kapasite dolmadı ise tekrar al olayı gelicek
+
             Database.CloseConnection();
         }
-        private void CreateNewAppointment(string appointmetID, string sportID)
+
+        private void CheckCapacity(string appointmentID)
+        {
+
+            Database.OpenConnection();
+            SqlCommand checkCapacity = new SqlCommand("SELECT Appointments.appointmentID, Appointments.appointmentDate, Appointments.appointmentHour, Sports.sportID, Sports.sportName, Sports.SportCapacity, COUNT(CreatedAppointments.createdappointmentAppID) AS AppointmentCount FROM Appointments INNER JOIN Sports ON Appointments.appointmentSportID = Sports.sportID LEFT JOIN CreatedAppointments ON Appointments.appointmentID = CreatedAppointments.createdappointmentAppID WHERE Appointments.appointmentID = @id GROUP BY Appointments.appointmentID, Appointments.appointmentDate, Appointments.appointmentHour, Sports.sportID, Sports.sportName, Sports.SportCapacity HAVING COUNT(CreatedAppointments.createdappointmentAppID) = Sports.SportCapacity", Database.GetConnection());
+            checkCapacity.Parameters.AddWithValue("@id", appointmentID);
+            SqlDataReader dataReader = checkCapacity.ExecuteReader();
+            if (dataReader.Read())
+            {
+                dataReader.Close();
+                SqlCommand updateAppointments = new SqlCommand("update Appointments set appointmentIsAvailable = 0 where appointmentID = @id", Database.GetConnection());
+                updateAppointments.Parameters.AddWithValue("@id", appointmentID);
+                updateAppointments.ExecuteNonQuery();
+            }
+            Database.CloseConnection();
+
+        }
+        private void CreateAppointment(string appointmentID, string sportID)
+        {
+            Database.OpenConnection();
+            SqlCommand createAppointment = new SqlCommand("insert into CreatedAppointments values(@appPersonID, @appAppID, @appSportID)", Database.GetConnection());
+            createAppointment.Parameters.AddWithValue("@appPersonID", Person.GetPersonID());
+            createAppointment.Parameters.AddWithValue("@appAppID", appointmentID);
+            createAppointment.Parameters.AddWithValue("@appSportID", sportID); createAppointment.ExecuteNonQuery();
+            MessageBox.Show("Successfully created appointment.");
+            Database.CloseConnection();
+        }
+        private void CreateNewAppointment(string appointmentID, string sportID)
         {
             Database.OpenConnection();
 
             SqlCommand createAppointment = new SqlCommand("insert into CreatedAppointments values(@appPersonID, @appAppID, @appSportID)", Database.GetConnection());
             createAppointment.Parameters.AddWithValue("@appPersonID", Person.GetPersonID());
-            createAppointment.Parameters.AddWithValue("@appAppID", appointmetID);
+            createAppointment.Parameters.AddWithValue("@appAppID", appointmentID);
 
             if (SportData != null)
             {
@@ -192,7 +245,7 @@ namespace SSRS_Test
 
                 SqlCommand updateAppointmentsCommand = new SqlCommand("update Appointments set appointmentSportID = @sportID where appointmentID = @appID", Database.GetConnection());
                 updateAppointmentsCommand.Parameters.AddWithValue("@sportID", sportID);
-                updateAppointmentsCommand.Parameters.AddWithValue("@appID", appointmetID);
+                updateAppointmentsCommand.Parameters.AddWithValue("@appID", appointmentID);
                 updateAppointmentsCommand.ExecuteNonQuery();
                 MessageBox.Show("Successfully created appointment.");
             }
@@ -209,6 +262,7 @@ namespace SSRS_Test
         private void CreateNewAppointmentButton_Click(object sender, EventArgs e)
         {
             CreateNewAppointment(AppointmentData, SportData);
+            CheckCapacity(AppointmentData);
             SetAppointmentsHoursToDateComboBox();
         }
         private void SportsComboBox_SelectedIndexChanged(object sender, EventArgs e)

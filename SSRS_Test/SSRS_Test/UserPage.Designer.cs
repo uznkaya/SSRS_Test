@@ -51,10 +51,16 @@
             this.CreateNewAppointmentButton = new System.Windows.Forms.Button();
             this.SportsComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.AppointmentDataGridView = new System.Windows.Forms.DataGridView();
+            this.MyAppointmentsPanel = new System.Windows.Forms.Panel();
+            this.RemoveAppointmentButton = new System.Windows.Forms.Button();
             this.AnaSayfaGroupBox.SuspendLayout();
             this.RandevuOlusturGroupBox.SuspendLayout();
+            this.RandevularimGroupBox.SuspendLayout();
             this.AyarlarGroupBox.SuspendLayout();
             this.SportPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AppointmentDataGridView)).BeginInit();
+            this.MyAppointmentsPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // NameSurnameLabel
@@ -165,6 +171,7 @@
             // 
             // RandevularimGroupBox
             // 
+            this.RandevularimGroupBox.Controls.Add(this.AppointmentDataGridView);
             this.RandevularimGroupBox.Location = new System.Drawing.Point(12, 455);
             this.RandevularimGroupBox.Name = "RandevularimGroupBox";
             this.RandevularimGroupBox.Size = new System.Drawing.Size(773, 191);
@@ -278,11 +285,39 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Spor Seçiniz :";
             // 
+            // AppointmentDataGridView
+            // 
+            this.AppointmentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.AppointmentDataGridView.Location = new System.Drawing.Point(8, 19);
+            this.AppointmentDataGridView.Name = "AppointmentDataGridView";
+            this.AppointmentDataGridView.Size = new System.Drawing.Size(759, 166);
+            this.AppointmentDataGridView.TabIndex = 0;
+            this.AppointmentDataGridView.SelectionChanged += new System.EventHandler(this.AppointmentDataGridView_SelectionChanged);
+            // 
+            // MyAppointmentsPanel
+            // 
+            this.MyAppointmentsPanel.Controls.Add(this.RemoveAppointmentButton);
+            this.MyAppointmentsPanel.Location = new System.Drawing.Point(797, 496);
+            this.MyAppointmentsPanel.Name = "MyAppointmentsPanel";
+            this.MyAppointmentsPanel.Size = new System.Drawing.Size(229, 100);
+            this.MyAppointmentsPanel.TabIndex = 4;
+            // 
+            // RemoveAppointmentButton
+            // 
+            this.RemoveAppointmentButton.Location = new System.Drawing.Point(41, 39);
+            this.RemoveAppointmentButton.Name = "RemoveAppointmentButton";
+            this.RemoveAppointmentButton.Size = new System.Drawing.Size(145, 23);
+            this.RemoveAppointmentButton.TabIndex = 2;
+            this.RemoveAppointmentButton.Text = "Remove Appointment";
+            this.RemoveAppointmentButton.UseVisualStyleBackColor = true;
+            this.RemoveAppointmentButton.Click += new System.EventHandler(this.RemoveAppointmentButton_Click);
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1061, 848);
+            this.Controls.Add(this.MyAppointmentsPanel);
             this.Controls.Add(this.SportPanel);
             this.Controls.Add(this.RandevularimGroupBox);
             this.Controls.Add(this.AyarlarGroupBox);
@@ -300,10 +335,13 @@
             this.AnaSayfaGroupBox.ResumeLayout(false);
             this.AnaSayfaGroupBox.PerformLayout();
             this.RandevuOlusturGroupBox.ResumeLayout(false);
+            this.RandevularimGroupBox.ResumeLayout(false);
             this.AyarlarGroupBox.ResumeLayout(false);
             this.AyarlarGroupBox.PerformLayout();
             this.SportPanel.ResumeLayout(false);
             this.SportPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AppointmentDataGridView)).EndInit();
+            this.MyAppointmentsPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,5 +372,8 @@
         private System.Windows.Forms.LinkLabel SportBackButton;
         private System.Windows.Forms.Button CreateNewAppointmentButton;
         private System.Windows.Forms.ComboBox SportsComboBox;
+        private System.Windows.Forms.DataGridView AppointmentDataGridView;
+        private System.Windows.Forms.Panel MyAppointmentsPanel;
+        private System.Windows.Forms.Button RemoveAppointmentButton;
     }
 }

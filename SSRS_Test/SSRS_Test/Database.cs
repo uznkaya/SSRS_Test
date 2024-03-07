@@ -9,7 +9,7 @@ namespace SSRS_Test
 {
     internal class Database
     {
-        private static string connectionString = "Data Source=DESKTOP-3HOFD4J\\SQLEXPRESS;Initial Catalog=SSRS;Integrated Security=True";
+        private static string connectionString = "Data Source=DESKTOP-BONGCST\\SQLEXPRESS;Initial Catalog=SSRS;Integrated Security=True";
         private static SqlConnection sqlConnection = new SqlConnection(connectionString);
         public static void OpenConnection()
         {

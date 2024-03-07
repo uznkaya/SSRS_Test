@@ -45,3 +45,15 @@ C:\Users\naysi\OneDrive\Masaüstü\SSRS_Test (2)\SSRS_Test\SSRS_Test\obj\Debug\S
 C:\Users\naysi\OneDrive\Masaüstü\SSRS_Test (2)\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.CoreCompileInputs.cache
 C:\Users\naysi\OneDrive\Masaüstü\SSRS_Test (2)\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.exe
 C:\Users\naysi\OneDrive\Masaüstü\SSRS_Test (2)\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.pdb
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.exe.config
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.exe
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\bin\Debug\SSRS_Test.pdb
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.AssemblyReference.cache
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.LoginPage.resources
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.Properties.Resources.resources
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.RegisterPage.resources
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.UserPage.resources
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.GenerateResource.cache
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.csproj.CoreCompileInputs.cache
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.exe
+C:\Users\iremd\OneDrive\Masaüstü\Github\SSRS_Test\SSRS_Test\SSRS_Test\obj\Debug\SSRS_Test.pdb

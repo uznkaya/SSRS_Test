@@ -1,0 +1,149 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\userpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|c:\\users\\iremd\\onedrive\\masa\u00FCst\u00FC\\github\\ssrs_test\\ssrs_test\\ssrs_test\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\adminpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\loginpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\person.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\registerpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\registerpage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\ssrs_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839E2EEF-0B60-4FF8-9A6F-26862E51E341}|SSRS_Test\\SSRS_Test.csproj|solutionrelative:ssrs_test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\LoginPage.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\LoginPage.cs [Design]",
+              "RelativeToolTip": "SSRS_Test\\LoginPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:47:57.581Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\UserPage.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\UserPage.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\UserPage.cs [Design]",
+              "RelativeToolTip": "SSRS_Test\\UserPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:47:57.77Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminPage.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\AdminPage.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\AdminPage.cs",
+              "ToolTip": "D:\\GitHub\\SSRS_Test\\SSRS_Test\\SSRS_Test\\AdminPage.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-07T07:47:57.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Person.cs",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\Person.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\Person.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\Person.cs",
+              "RelativeToolTip": "SSRS_Test\\Person.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwBEAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:47:57.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Database.cs",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\Database.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\Database.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\Database.cs",
+              "RelativeToolTip": "SSRS_Test\\Database.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:47:57.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RegisterPage.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\RegisterPage.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\RegisterPage.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\SSRS_Test\\SSRS_Test\\RegisterPage.cs [Tasar\u0131m]",
+              "RelativeToolTip": "..\\..\\..\\SSRS_Test\\SSRS_Test\\RegisterPage.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003525|",
+              "WhenOpened": "2024-03-07T07:47:57.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\Program.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\Program.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\Program.cs",
+              "RelativeToolTip": "SSRS_Test\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:47:57.99Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginPage.cs",
+              "DocumentMoniker": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\LoginPage.cs",
+              "RelativeDocumentMoniker": "SSRS_Test\\LoginPage.cs",
+              "ToolTip": "C:\\Users\\iremd\\OneDrive\\Masa\u00FCst\u00FC\\Github\\SSRS_Test\\SSRS_Test\\SSRS_Test\\LoginPage.cs",
+              "RelativeToolTip": "SSRS_Test\\LoginPage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwBUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T07:47:57.99Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
